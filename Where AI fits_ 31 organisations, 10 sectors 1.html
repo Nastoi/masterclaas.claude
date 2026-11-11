@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Where AI fits: 31 organisations, 10 sectors</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#eef2f5;--surface:#fff;--ink:#12212e;--mute:#566877;--line:#d3dce3;--accent:#0f8b8d;--accent-ink:#fff;--quick:#2f9e6b;--mid:#d9901a;--long:#7a4fc4;--v:#0f8b8d;--k:#7fb8c4;--g:#e0b04a;--u:#b7c1c9;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1a24;--surface:#162636;--ink:#e8eef3;--mute:#9db0bf;--line:#2a3f52;--accent:#3cc4c6;--accent-ink:#06222a;--quick:#4fcf93;--mid:#f0b04a;--long:#a98aea;--v:#3cc4c6;--k:#5d8f9b;--g:#d9a53f;--u:#586a79}}
+:root[data-theme="dark"]{--bg:#0e1a24;--surface:#162636;--ink:#e8eef3;--mute:#9db0bf;--line:#2a3f52;--accent:#3cc4c6;--accent-ink:#06222a;--quick:#4fcf93;--mid:#f0b04a;--long:#a98aea;--v:#3cc4c6;--k:#5d8f9b;--g:#d9a53f;--u:#586a79}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Bricolage Grotesque",system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.5}
+main{max-width:980px;margin:0 auto;padding:28px 18px 60px}
+h1{font-size:clamp(2rem,6vw,3.4rem);line-height:1.02;margin:0 0 10px;font-weight:800;letter-spacing:-.02em}
+.lead{color:var(--mute);max-width:56ch;margin:0 0 26px}
+.stats{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:26px}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:10px 16px}
+.stat b{display:block;font-size:1.7rem;font-weight:800;line-height:1.1}
+.stat span{font-size:.85rem;color:var(--mute)}
+h2{font-size:1.1rem;margin:0 0 4px;font-weight:600}
+.hint{color:var(--mute);font-size:.9rem;margin:0 0 12px}
+.blocks{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px;margin-bottom:28px}
+.blk{min-width:0;min-height:104px;gap:8px;border:2px solid transparent;border-radius:12px;background:var(--surface);color:var(--ink);font:inherit;text-align:left;padding:10px 12px;cursor:pointer;display:flex;flex-direction:column;justify-content:space-between;outline-offset:2px}
+.blk:hover{border-color:var(--line)}
+.blk[aria-pressed="true"]{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.blk .c{font-size:1.5rem;font-weight:800;line-height:1}
+.blk .t{font-size:.86rem;line-height:1.25;white-space:normal;overflow-wrap:break-word;hyphens:auto}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:20px}
+.ph{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;align-items:flex-end;margin-bottom:14px}
+.ph h3{margin:0;font-size:1.5rem;font-weight:800}
+.ph p{margin:2px 0 0;color:var(--mute);font-size:.92rem}
+.mix{min-width:210px}
+.bar{display:flex;height:12px;border-radius:99px;overflow:hidden;background:var(--line)}
+.bar i{display:block}
+.legend{display:flex;flex-wrap:wrap;gap:4px 12px;font-size:.78rem;color:var(--mute);margin-top:6px}
+.legend em{font-style:normal;display:inline-flex;align-items:center;gap:5px}
+.legend em::before{content:"";width:9px;height:9px;border-radius:3px;background:var(--c)}
+.filters{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 14px}
+.f{font:inherit;font-size:.88rem;border:1px solid var(--line);background:transparent;color:var(--ink);border-radius:99px;padding:5px 13px;cursor:pointer}
+.f[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+li{display:flex;gap:10px;align-items:flex-start;border:1px solid var(--line);border-radius:12px;padding:10px 12px}
+li .tag{flex:none;font-size:.74rem;font-weight:600;border-radius:99px;padding:2px 9px;color:#fff;margin-top:2px}
+.q{background:var(--quick)}.m{background:var(--mid)}.l{background:var(--long)}
+.empty{color:var(--mute);padding:8px 2px}
+.cross{margin-top:28px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{background:var(--surface);border:1px solid var(--line);border-radius:99px;padding:6px 14px;font-size:.9rem}
+.road{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px;margin-top:28px}
+.step{border-radius:14px;padding:14px 16px;background:var(--surface);border-top:5px solid var(--c)}
+.step b{display:block;font-size:1.05rem}
+.step span{color:var(--mute);font-size:.9rem}
+.note{margin-top:28px;color:var(--mute);font-size:.82rem}
+@media (prefers-reduced-motion:no-preference){.panel{animation:pop .25s ease-out}@keyframes pop{from{opacity:.4;transform:translateY(6px)}to{opacity:1;transform:none}}}
+</style>
+</head>
+<body>
+<main>
+<h1>Where AI fits across 31 organisations</h1>
+<p class="lead">Ten sectors, one question: what can AI do for each, and what should happen first? Tap a sector to explore.</p>
+
+<div class="stats">
+<div class="stat"><b>31</b><span>organisations</span></div>
+<div class="stat"><b>10</b><span>sectors</span></div>
+<div class="stat"><b id="uc">0</b><span>AI use cases</span></div>
+<div class="stat"><b>6 / 8</b><span>verified / well-known</span></div>
+</div>
+
+<h2>Pick a sector</h2>
+<p class="hint">The number on each tile is how many organisations sit in that sector.</p>
+<div class="blocks" id="blocks"></div>
+
+<section class="panel" id="panel" aria-live="polite"></section>
+
+<section class="cross">
+<h2>Useful everywhere</h2>
+<p class="hint">These apply to every sector, whatever the business.</p>
+<div class="chips" id="chips"></div>
+</section>
+
+<section class="road">
+<div class="step" style="--c:var(--quick)"><b>Start now (weeks)</b><span>Meeting summaries, document drafting, an internal Q&amp;A assistant.</span></div>
+<div class="step" style="--c:var(--mid)"><b>Build next (1–3 months)</b><span>Customer chatbots, document extraction, demand forecasting.</span></div>
+<div class="step" style="--c:var(--long)"><b>Invest later (3–12 months)</b><span>Visual inspection, predictive maintenance, personalisation.</span></div>
+</section>
+
+<p class="note">Sector placement for 14 organisations is inferred from names only and 3 are unidentified, so treat those counts as provisional. Check customer-data use against the PDPA, and regulated sectors against their own rules (MAS, HSA, legal confidentiality).</p>
+</main>
+
+<script>
+var D=[
+{n:"Consulting and advisory",c:4,m:[2,0,2,0],d:"Knowledge work built on documents, research and expertise.",u:[
+["q","Draft proposals and reports"],["q","Summarise meetings into action items"],["m","Searchable knowledge base of past engagements"],["m","Research and benchmarking summaries"],["m","AI-assisted audit and compliance checks"],["m","AI training and upskilling content"]]},
+{n:"Legal",c:1,m:[0,0,1,0],d:"Heavy on reading, drafting and precedent.",u:[
+["q","First drafts of letters and documents"],["m","Contract review and clause extraction"],["m","Legal research and due-diligence summaries"],["m","Client-intake triage"]]},
+{n:"Financial services",c:3,m:[0,2,1,0],d:"Investment, planning and advisory with strict compliance needs.",u:[
+["q","Personalised client reports and newsletters"],["m","Investment-memo and due-diligence summaries"],["m","Client-meeting prep and suitability documentation"],["m","KYC and AML screening support"],["l","Portfolio and SME-company monitoring"]]},
+{n:"Aerospace and aviation",c:2,m:[1,0,1,0],d:"Safety-critical maintenance, parts and records.",u:[
+["q","Technical manual and part-number lookup"],["m","Compliance and maintenance-record documentation"],["m","Parts inventory and procurement optimisation"],["l","Visual inspection with computer vision"],["l","Predictive maintenance and component-life forecasting"]]},
+{n:"Healthcare and medical supply",c:3,m:[1,0,2,0],d:"Distribution, regulation and service. No clinical advice or patient data without safeguards.",u:[
+["q","Draft tenders and quotations"],["q","Product-catalogue Q&A for sales teams"],["m","Regulatory documentation support"],["m","Customer-service chatbot"],["m","Demand forecasting and inventory optimisation"]]},
+{n:"Education and training",c:3,m:[1,2,0,0],d:"Learners, courses, funding schemes and assessment.",u:[
+["q","Generate course content and assessments"],["q","Grant and funding-eligibility assistant"],["m","Enrolment and lead-qualification chatbot"],["m","AI tutoring and learner Q&A"],["l","Personalised learning paths"]]},
+{n:"Real estate, construction and materials",c:3,m:[0,1,2,0],d:"Projects, tenants and specifications.",u:[
+["q","Lease and document abstraction"],["m","Tenant and owner enquiry chatbot"],["m","Quantity take-off and tender estimating"],["m","Specification recommendation for coatings and facades"],["l","Site progress and safety monitoring from photos"],["l","Project scheduling and delay prediction"]]},
+{n:"Engineering, manufacturing and appliances",c:6,m:[1,1,4,0],d:"The biggest sector: quoting, quality and after-sales.",u:[
+["q","Search technical documentation"],["m","Quote from drawings"],["m","After-sales support and warranty-claim triage"],["m","Product-recommendation and service chatbots"],["m","Production scheduling and demand forecasting"],["l","Defect detection and quality inspection"]]},
+{n:"Lifestyle, media and design",c:3,m:[0,2,1,0],d:"Members, audiences and creative output.",u:[
+["q","Marketing copy and social content"],["q","Summarise and translate reviews and tasting notes"],["q","Design concepts, mood boards and variations"],["m","Member booking assistant"],["l","Member personalisation and event demand forecasting"]]},
+{n:"Cross-cutting",c:3,m:[0,0,0,3],d:"Business not yet identified, so only cross-cutting use cases apply.",u:[
+["q","Meeting summaries and email drafting"],["q","Internal Q&A assistant"]]}
+];
+var H={q:"Quick win",m:"Medium effort",l:"Longer term"},cur=0,flt="all";
+var total=0;D.forEach(function(s){total+=s.u.length});
+document.getElementById("uc").textContent=total+"+";
+var B=document.getElementById("blocks");
+D.forEach(function(s,i){var b=document.createElement("button");b.className="blk";b.style.setProperty("--n",s.c);b.innerHTML='<span class="c">'+s.c+'</span><span class="t">'+s.n+'</span>';b.onclick=function(){cur=i;draw()};B.appendChild(b)});
+var C=["Invoice and receipt processing","Expense categorisation","Lead research and email drafting","CRM updates","Website chat","Job-description drafting","CV screening support","Onboarding Q&A","Meeting transcription"];
+C.forEach(function(t){var e=document.createElement("span");e.className="chip";e.textContent=t;document.getElementById("chips").appendChild(e)});
+function draw(){
+var s=D[cur],t=s.m[0]+s.m[1]+s.m[2]+s.m[3];
+Array.prototype.forEach.call(B.children,function(b,i){b.setAttribute("aria-pressed",i===cur)});
+function w(x){return (x/t*100)+"%"}
+var items=s.u.filter(function(u){return flt==="all"||u[0]===flt});
+var li=items.length?items.map(function(u){return '<li><span class="tag '+u[0]+'">'+H[u[0]]+'</span><span>'+u[1]+'</span></li>'}).join(""):'<li class="empty">No use cases at this horizon. Try another filter.</li>';
+var f=["all","q","m","l"].map(function(k){return '<button class="f" data-k="'+k+'" aria-pressed="'+(flt===k)+'">'+(k==="all"?"All":H[k])+'</button>'}).join("");
+document.getElementById("panel").innerHTML='<div class="ph"><div><h3>'+s.n+'</h3><p>'+s.c+(s.c>1?" organisations. ":" organisation. ")+s.d+'</p></div><div class="mix"><div class="bar" role="img" aria-label="Evidence mix"><i style="width:'+w(s.m[0])+';background:var(--v)"></i><i style="width:'+w(s.m[1])+';background:var(--k)"></i><i style="width:'+w(s.m[2])+';background:var(--g)"></i><i style="width:'+w(s.m[3])+';background:var(--u)"></i></div><div class="legend"><em style="--c:var(--v)">Verified '+s.m[0]+'</em><em style="--c:var(--k)">Well-known '+s.m[1]+'</em><em style="--c:var(--g)">Inferred '+s.m[2]+'</em><em style="--c:var(--u)">Unknown '+s.m[3]+'</em></div></div></div><div class="filters">'+f+'</div><ul>'+li+'</ul>';
+Array.prototype.forEach.call(document.querySelectorAll(".f"),function(b){b.onclick=function(){flt=b.getAttribute("data-k");draw()}});
+}
+draw();
+</script>
+</body>
+</html>
