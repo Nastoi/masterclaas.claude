@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+  <title id="title">Novamart workflow without AI and with Claude support</title>
+  <desc id="desc">Without AI, teams manually search, re-enter information, confirm stock and price, then prepare a reply. With Claude, staff share approved context, Claude summarizes and drafts, staff verify details, and a person approves and responds. Potential benefits are less searching, more consistent drafts, and clearer follow-through while people retain control.</desc>
+  <defs>
+    <linearGradient id="blueWash" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e2f3ff"/><stop offset="1" stop-color="#f4faff"/></linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="125%"><feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#172b4d" flood-opacity=".10"/></filter>
+  </defs>
+  <rect width="1200" height="700" rx="28" fill="#f3f6fa"/>
+  <rect x="22" y="22" width="566" height="656" rx="24" fill="#fff" stroke="#f1dec8" filter="url(#shadow)"/>
+  <rect x="612" y="22" width="566" height="656" rx="24" fill="url(#blueWash)" stroke="#b8dcf5" filter="url(#shadow)"/>
+  <path d="M22 46a24 24 0 0 1 24-24h518a24 24 0 0 1 24 24v104H22z" fill="#fff3e5"/>
+  <path d="M612 46a24 24 0 0 1 24-24h518a24 24 0 0 1 24 24v104H612z" fill="#dff1ff"/>
+  <circle cx="70" cy="85" r="29" fill="#f7630c"/><path d="M57 74h25M57 85h18M57 96h11" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+  <text x="116" y="76" font-family="Arial,sans-serif" font-size="27" font-weight="700" fill="#172b4d">WITHOUT AI</text>
+  <text x="116" y="108" font-family="Arial,sans-serif" font-size="17" fill="#63758b">People move every hand-off manually</text>
+  <circle cx="660" cy="85" r="29" fill="#0078d4"/><path d="M660 63l5 15 15 5-15 5-5 15-5-15-15-5 15-5z" fill="#fff"/>
+  <text x="706" y="76" font-family="Arial,sans-serif" font-size="27" font-weight="700" fill="#172b4d">WITH CLAUDE SUPPORT</text>
+  <text x="706" y="108" font-family="Arial,sans-serif" font-size="17" fill="#52677f">Claude prepares; people verify and decide</text>
+  <g font-family="Arial,sans-serif">
+    <path d="M75 208v284" stroke="#f2c79d" stroke-width="4" stroke-dasharray="5 9"/>
+    <circle cx="75" cy="208" r="19" fill="#f7630c"/><text x="75" y="215" text-anchor="middle" font-size="16" font-weight="700" fill="#fff">1</text><text x="113" y="204" font-size="20" font-weight="700" fill="#172b4d">Customer enquiry arrives</text><text x="113" y="231" font-size="16" fill="#63758b">Details land across inboxes and forms</text>
+    <circle cx="75" cy="300" r="19" fill="#f7630c"/><text x="75" y="307" text-anchor="middle" font-size="16" font-weight="700" fill="#fff">2</text><text x="113" y="296" font-size="20" font-weight="700" fill="#172b4d">Staff search and re-enter</text><text x="113" y="323" font-size="16" fill="#63758b">Repeat checks in notes and spreadsheets</text>
+    <circle cx="75" cy="392" r="19" fill="#f7630c"/><text x="75" y="399" text-anchor="middle" font-size="16" font-weight="700" fill="#fff">3</text><text x="113" y="388" font-size="20" font-weight="700" fill="#172b4d">Teams confirm stock and offer</text><text x="113" y="415" font-size="16" fill="#63758b">Several hand-offs to confirm details</text>
+    <circle cx="75" cy="484" r="19" fill="#f7630c"/><text x="75" y="491" text-anchor="middle" font-size="16" font-weight="700" fill="#fff">4</text><text x="113" y="480" font-size="20" font-weight="700" fill="#172b4d">Service writes and follows up</text><text x="113" y="507" font-size="16" fill="#63758b">Manual work to prepare each response</text>
+    <path d="M665 208v284" stroke="#93c7ee" stroke-width="4" stroke-dasharray="5 9"/>
+    <circle cx="665" cy="208" r="19" fill="#0078d4"/><text x="665" y="215" text-anchor="middle" font-size="16" font-weight="700" fill="#fff">1</text><text x="703" y="204" font-size="20" font-weight="700" fill="#172b4d">Staff share approved context</text><text x="703" y="231" font-size="16" fill="#52677f">Enquiry plus product and policy sources</text>
+    <circle cx="665" cy="300" r="19" fill="#0078d4"/><text x="665" y="307" text-anchor="middle" font-size="16" font-weight="700" fill="#fff">2</text><text x="703" y="296" font-size="20" font-weight="700" fill="#172b4d">Claude organizes the details</text><text x="703" y="323" font-size="16" fill="#52677f">Summarizes needs; flags missing information</text>
+    <circle cx="665" cy="392" r="19" fill="#0078d4"/><text x="665" y="399" text-anchor="middle" font-size="16" font-weight="700" fill="#fff">3</text><text x="703" y="388" font-size="20" font-weight="700" fill="#172b4d">Claude prepares a draft</text><text x="703" y="415" font-size="16" fill="#52677f">Staff verify stock, price, and policy details</text>
+    <circle cx="665" cy="484" r="19" fill="#107c10"/><text x="665" y="491" text-anchor="middle" font-size="16" font-weight="700" fill="#fff">4</text><text x="703" y="480" font-size="20" font-weight="700" fill="#172b4d">A person approves and replies</text><text x="703" y="507" font-size="16" fill="#52677f">People own decisions and next actions</text>
+  </g>
+  <rect x="46" y="554" width="518" height="94" rx="16" fill="#fff8f0" stroke="#f2dfca"/>
+  <text x="68" y="584" font-family="Arial,sans-serif" font-size="14" font-weight="700" letter-spacing="1.5" fill="#a85113">COMMON FRICTION</text>
+  <text x="68" y="615" font-family="Arial,sans-serif" font-size="18" font-weight="700" fill="#172b4d">Repeated search · hand-offs · rework</text>
+  <rect x="636" y="554" width="518" height="94" rx="16" fill="#fff" stroke="#b9dcf5"/>
+  <text x="658" y="584" font-family="Arial,sans-serif" font-size="14" font-weight="700" letter-spacing="1.5" fill="#0067b8">POTENTIAL BENEFITS</text>
+  <text x="658" y="615" font-family="Arial,sans-serif" font-size="18" font-weight="700" fill="#172b4d">Less searching · consistent drafts · clearer next steps</text>
+  <text x="600" y="675" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#52677f">Potential gains depend on approved information, a well-designed workflow, and staff review.</text>
+</svg>
